@@ -12,6 +12,9 @@ problem8 = types_of_problems.PolarForm()
 
 problem_set = [problem1, problem2, problem3, problem4, problem5, problem6, problem7, problem8]
 problems = random.sample(problem_set, 5)
+
+print('\n')
+
 for problem in problems:
     problem.print_the_problem()
-    print("\n\n")
+    print("\n")

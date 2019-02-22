@@ -19,7 +19,6 @@ class TrigVariableProblem:
         possible_variable_values = ["2x", "x", "x/2", "x/3", "x/4", "3x", "4x"]
         first_trig = random.choice(TRIG_FUNCS)
         index_of_this_function = TRIG_FUNCS.index(first_trig)
-        print(index_of_this_function)
         second_one = ONE_OVER_TRIG_FUNCS
         second_one.remove(second_one[index_of_this_function-1])
         second_trig = random.choice(second_one)
@@ -122,7 +121,7 @@ class VectorCrossProductProblem:
         self.generate()
 
     def generate(self):
-        numbers = range(1,20)
+        numbers = range(1,9)
         v1 = random.choice(numbers)
         v2 = random.choice(numbers)
         v3 = random.choice(numbers)
