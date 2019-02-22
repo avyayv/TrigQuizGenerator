@@ -19,8 +19,9 @@ class TrigVariableProblem:
         possible_variable_values = ["2x", "x", "x/2", "x/3", "x/4", "3x", "4x"]
         first_trig = random.choice(TRIG_FUNCS)
         index_of_this_function = TRIG_FUNCS.index(first_trig)
+        print(index_of_this_function)
         second_one = ONE_OVER_TRIG_FUNCS
-        del second_one[index_of_this_function]
+        second_one.remove(second_one[index_of_this_function-1])
         second_trig = random.choice(second_one)
         self.problem = first_trig+'('+second_trig+random.choice(possible_variable_values)+')' + ' ' + random.choice(possible_restrictions)
         return self.problem
@@ -190,7 +191,7 @@ class PolarForm:
         second = ["-sqrt(3)i", "+sqrt(3)i", "-sqrt(3)/3i","+sqrt(3)/3i","+i","+i","-i"]
         self.problem = (random.choice(trig_numbers)+random.choice(second))
         return self.problem
-        
+
     def print_the_problem(self):
         self.generate()
         print("WRITE IN POLAR FORM")
